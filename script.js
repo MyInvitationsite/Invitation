@@ -111,21 +111,21 @@ openBtn.addEventListener("click", () => {
 
     // ================= 5. INTERACTIVE MAP ENGINE INJECTION =================
     function initializeEventMap() {
-        // GPS Coordinates center pinpointing Chennai wedding areas
-        const coordinatesVector = [13.0827, 80.2707]; 
-        
-        const mapInstance = L.map('map', {
-            scrollWheelZoom: false
-        }).setView(coordinatesVector, 13);
+    // Dindigul Coordinates
+    const coordinatesVector = [10.36896, 77.98036];
 
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(mapInstance);
+    const mapInstance = L.map('map', {
+        scrollWheelZoom: false
+    }).setView(coordinatesVector, 15);
 
-        L.marker(coordinatesVector).addTo(mapInstance)
-            .bindPopup('<b>Wedding Venue Portfolio</b><br>Grand Marriage Palace.')
-            .openPopup();
-    }
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(mapInstance);
+
+    L.marker(coordinatesVector).addTo(mapInstance)
+        .bindPopup('<b>Wedding Venue</b><br>Dindigul, Tamil Nadu')
+        .openPopup();
+}
 
     // ================= 6. AMBIENT PARTICLES ENGINE (FLOATING PETALS) =================
     function startPetalsGenerator() {
